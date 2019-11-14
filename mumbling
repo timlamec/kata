@@ -1,0 +1,15 @@
+def accum(s):
+    # your code
+    #initialize count to start from 0
+    count = 0
+    ret = ""
+    #check letters in the string and capitalize the first else the rest remain lower case. 
+    for i in s:
+        count += 1
+        ret += i.upper()
+        for index in range(count-1):
+            ret += i.lower()
+        if count < len(s):
+            ret += "-"
+    return ret
+    
